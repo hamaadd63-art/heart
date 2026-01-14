@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>قلب منى ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #111;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="canvas" width="400" height="400"></canvas>
+
+<script>
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
+
+  ctx.translate(200, 220);
+  ctx.scale(1, -1);
+
+  ctx.beginPath();
+  ctx.moveTo(0, -50);
+  ctx.bezierCurveTo(-100, 80, -200, -40, 0, -180);
+  ctx.bezierCurveTo(200, -40, 100, 80, 0, -50);
+  ctx.fillStyle = "red";
+  ctx.fill();
+
+  ctx.scale(1, -1);
+  ctx.fillStyle = "white";
+  ctx.font = "30px Arial";
+  ctx.textAlign = "center";
+  ctx.fillText("منى", 0, 20);
+</script>
+
+</body>
+</html>
